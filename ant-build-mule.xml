@@ -1,0 +1,142 @@
+<project default="wsimport">
+	<target name="wsimport">
+		<property name="serverIP" value="192.168.0.14:8081" />
+		<property name="commandPath" value="C:\Program Files\Java\jdk1.8.0_144\bin\" />
+		<property name="wsdlGrupoInvestigacion" value="http://${serverIP}/flujoGrupoInvestigacion?wsdl" />
+		<property name="wsdlInvestigador" value="http://${serverIP}/flujoInvestigador?wsdl" />
+		<property name="wsdlApoyoProgramaFormacion" value="http://${serverIP}/flujoApoyoProgramaFormacion?wsdl" />
+		<property name="wsdlArticuloInvestigacion" value="http://${serverIP}/flujoArticuloInvestigacion?wsdl" />
+		<property name="wsdlAsesoriaProgramaOndas" value="http://${serverIP}/flujoAsesoriaProgramaOndas?wsdl" />
+		<property name="wsdlBoletin" value="http://${serverIP}/flujoBoletin?wsdl" />
+		<property name="wsdlCapituloLibroInvestigacion" value="http://${serverIP}/flujoCapituloLibroInvestigacion?wsdl" />
+		<property name="wsdlConsultoria" value="http://${serverIP}/flujoConsultoria?wsdl" />
+		<property name="wsdlDisenoIndustrial" value="http://${serverIP}/flujoDisenoIndustrial?wsdl" />
+		<property name="wsdlDocumentoTrabajo" value="http://${serverIP}/flujoDocumentoTrabajo?wsdl" />
+		<property name="wsdlEdicion" value="http://${serverIP}/flujoEdicion?wsdl" />
+		<property name="wsdlEmpresaBaseTecnologica" value="http://${serverIP}/flujoEmpresaBaseTecnologica?wsdl" />
+		<property name="wsdlEspacioParticipacionCiudadanaCTI" value="http://${serverIP}/flujoEspacioParticipacionCiudadanaCTI?wsdl" />
+		<property name="wsdlEsquemaCircuito" value="http://${serverIP}/flujoEsquemaCircuito?wsdl" />
+		<property name="wsdlEstrategiaComunicacionConocimiento" value="http://${serverIP}/flujoEstrategiaComunicacionConocimiento?wsdl" />
+		<property name="wsdlEstrategiaPedagogicaFomentoCTI" value="http://${serverIP}/flujoEstrategiaPedagogicaFomentoCTI?wsdl" />
+		<property name="wsdlEventoCientifico" value="http://${serverIP}/flujoEventoCientifico?wsdl" />
+		<property name="wsdlGeneracionContenido" value="http://${serverIP}/flujoGeneracionContenido?wsdl" />
+		<property name="wsdlInformeFinalInvestigacion" value="http://${serverIP}/flujoInformeFinalInvestigacion?wsdl" />
+		<property name="wsdlInformeTecnicoFinal" value="http://${serverIP}/flujoInformeTecnicoFinal?wsdl" />
+		<property name="wsdlInnovacionProcedimientoServicio" value="http://${serverIP}/flujoInnovacionProcedimientoServicio?wsdl" />
+		<property name="wsdlLibroInvestigacion" value="http://${serverIP}/flujoLibroInvestigacion?wsdl" />
+		<property name="wsdlParticipacionCiudadanaProyectoCTI" value="http://${serverIP}/flujoParticipacionCiudadanaProyectoCTI?wsdl" />
+		<property name="wsdlPatente" value="http://${serverIP}/flujoPatente?wsdl" />			
+		<property name="wsdlPlantaPiloto" value="http://${serverIP}/flujoPlantaPiloto?wsdl" />
+		<property name="wsdlPrototipoIndustrial" value="http://${serverIP}/flujoPrototipoIndustrial?wsdl" />
+		<property name="wsdlProyectoExtensionCTI" value="http://${serverIP}/flujoProyectoExtensionCTI?wsdl" />
+		<property name="wsdlProyecto" value="http://${serverIP}/flujoProyecto?wsdl" />			
+		<property name="wsdlRedConocimiento" value="http://${serverIP}/flujoRedConocimiento?wsdl" />
+		<property name="wsdlSecretoEmpresarial" value="http://${serverIP}/flujoSecretoEmpresarial?wsdl" />
+		<property name="wsdlSignoDistintivo" value="http://${serverIP}/flujoSignoDistintivo?wsdl" />
+		<property name="wsdlSoftware" value="http://${serverIP}/flujoSoftware?wsdl" />
+		<property name="wsdlTrabajoGrado" value="http://${serverIP}/flujoTrabajoGrado?wsdl" />
+			
+	
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlGrupoInvestigacion}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+							<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlInvestigador}" />
+						</exec>
+		<exec executable="${commandPath}wsimport">
+			<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlApoyoProgramaFormacion}" />
+		</exec>
+		<exec executable="${commandPath}wsimport">
+			<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlArticuloInvestigacion}" />
+		</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlAsesoriaProgramaOndas}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlBoletin}" />
+				</exec>
+
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlCapituloLibroInvestigacion}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlConsultoria}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlDisenoIndustrial}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlDocumentoTrabajo}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEdicion}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEmpresaBaseTecnologica}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEspacioParticipacionCiudadanaCTI}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEsquemaCircuito}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEstrategiaComunicacionConocimiento}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEstrategiaPedagogicaFomentoCTI}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlEventoCientifico}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlGeneracionContenido}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlInformeFinalInvestigacion}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlInformeTecnicoFinal}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlInnovacionProcedimientoServicio}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlLibroInvestigacion}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlParticipacionCiudadanaProyectoCTI}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlPatente}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlPlantaPiloto}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlPrototipoIndustrial}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlProyectoExtensionCTI}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlProyecto}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlRedConocimiento}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlSecretoEmpresarial}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlSignoDistintivo}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlSoftware}" />
+				</exec>
+		<exec executable="${commandPath}wsimport">
+					<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlTrabajoGrado}" />
+				</exec>
+		
+	</target>
+</project>

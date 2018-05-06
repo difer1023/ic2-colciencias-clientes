@@ -1,0 +1,17 @@
+<project default="wsimport">
+	<target name="wsimport">
+		<property name="commandPath" value="C:\Program Files\Java\jdk1.8.0_144\bin\" />
+		<property name="wsdlPrivado" value="http://192.168.0.13:8084/scrapper_IC2_colciencias/ScrapperColcienciasPrivado?wsdl" />
+		<property name="wsdlPublico" value="http://192.168.0.13:8084/scrapper_IC2_colciencias/ScrapperColcienciasPublico?wsdl" />
+
+<!-- 		<property name="packageClassesName" value="co.com.ic2.colciencias.scrapper.privado" /> -->
+
+		<exec executable="${commandPath}wsimport">
+			<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlPrivado}" />
+		</exec>
+
+		<exec executable="${commandPath}wsimport">
+			<arg line="-keep -Xnocompile -s ./src -d ./bin ${wsdlPublico}" />
+		</exec>
+	</target>
+</project>
