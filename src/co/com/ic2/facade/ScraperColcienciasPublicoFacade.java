@@ -37,10 +37,10 @@ public class ScraperColcienciasPublicoFacade {
 
 	public GrupoInvestigacion extraerGrupoInvestigacion(String urlGruplac,
 			boolean instituciones, boolean lineasInvestigacion,
-			boolean integrantes, boolean productos) throws RemoteException {
+			boolean integrantes,boolean integrantesDetalles, boolean productos) throws RemoteException {
 
 		return scrapperColcienciasPublico.getScrapperColcienciasPublicoPort()
 				.extraerGrupoInvestigacion(urlGruplac, instituciones,
-						lineasInvestigacion, integrantes, productos);
+						lineasInvestigacion, integrantes,integrantesDetalles, productos);
 	}
 }

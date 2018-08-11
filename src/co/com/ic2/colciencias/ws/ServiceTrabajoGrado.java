@@ -100,6 +100,20 @@ public interface ServiceTrabajoGrado {
      * 
      * @param arg0
      * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionTrabajosGrado", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionTrabajosGrado")
+    @ResponseWrapper(localName = "consultarClasificacionTrabajosGradoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionTrabajosGradoResponse")
+    public String consultarClasificacionTrabajosGrado(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.TrabajoGrado>
      */
     @WebMethod

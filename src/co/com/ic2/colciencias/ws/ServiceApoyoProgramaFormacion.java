@@ -42,6 +42,20 @@ public interface ServiceApoyoProgramaFormacion {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionApoyoProgramasFormacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionApoyoProgramasFormacion")
+    @ResponseWrapper(localName = "consultarClasificacionApoyoProgramasFormacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionApoyoProgramasFormacionResponse")
+    public String consultarClasificacionApoyoProgramasFormacion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param codigoGrupo
      * @param apoyosProgramaFormacion
      * @return

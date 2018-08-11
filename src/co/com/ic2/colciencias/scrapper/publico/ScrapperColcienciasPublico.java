@@ -1,6 +1,7 @@
 
 package co.com.ic2.colciencias.scrapper.publico;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -10,6 +11,7 @@ import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import co.com.ic2.colciencias.gruplac.GrupoInvestigacion;
+import co.com.ic2.colciencias.gruplac.Investigador;
 
 
 /**
@@ -29,8 +31,24 @@ public interface ScrapperColcienciasPublico {
 
     /**
      * 
+     * @param investigador
+     * @return
+     *     returns java.util.List<co.com.ic2.colciencias.gruplac.GrupoInvestigacion>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "extraerGruposInvestigador", targetNamespace = "http://publico.scrapper.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.scrapper.publico.ExtraerGruposInvestigador")
+    @ResponseWrapper(localName = "extraerGruposInvestigadorResponse", targetNamespace = "http://publico.scrapper.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.scrapper.publico.ExtraerGruposInvestigadorResponse")
+    @Action(input = "http://publico.scrapper.colciencias.ic2.com.co/ScrapperColcienciasPublico/extraerGruposInvestigadorRequest", output = "http://publico.scrapper.colciencias.ic2.com.co/ScrapperColcienciasPublico/extraerGruposInvestigadorResponse")
+    public List<GrupoInvestigacion> extraerGruposInvestigador(
+        @WebParam(name = "Investigador", targetNamespace = "")
+        Investigador investigador);
+
+    /**
+     * 
      * @param instituciones
      * @param lineasInvestigacion
+     * @param integrantesDetalles
      * @param urlGruplac
      * @param integrantes
      * @param productos
@@ -51,6 +69,8 @@ public interface ScrapperColcienciasPublico {
         boolean lineasInvestigacion,
         @WebParam(name = "integrantes", targetNamespace = "")
         boolean integrantes,
+        @WebParam(name = "integrantesDetalles", targetNamespace = "")
+        boolean integrantesDetalles,
         @WebParam(name = "productos", targetNamespace = "")
         boolean productos);
 

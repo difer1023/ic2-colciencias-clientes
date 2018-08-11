@@ -28,6 +28,20 @@ public interface ServiceAsesoriaProgramaOndas {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionAsesoriasProgramaOndas", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionAsesoriasProgramaOndas")
+    @ResponseWrapper(localName = "consultarClasificacionAsesoriasProgramaOndasResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionAsesoriasProgramaOndasResponse")
+    public String consultarClasificacionAsesoriasProgramaOndas(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param asesoriasOndas
      * @param codigoGrupo
      * @return

@@ -104,4 +104,18 @@ public interface ServicePlantaPiloto {
         @WebParam(name = "plantasPiloto", targetNamespace = "")
         List<PlantaPiloto> plantasPiloto);
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionPlantasPiloto", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionPlantasPiloto")
+    @ResponseWrapper(localName = "consultarClasificacionPlantasPilotoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionPlantasPilotoResponse")
+    public String consultarClasificacionPlantasPiloto(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
 }

@@ -35,14 +35,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ExtraerGrupoInvestigacionObject }
-     * 
-     */
-    public ExtraerGrupoInvestigacionObject createExtraerGrupoInvestigacionObject() {
-        return new ExtraerGrupoInvestigacionObject();
-    }
-
-    /**
      * Create an instance of {@link ExtraerGrupoInvestigacion }
      * 
      */
@@ -56,6 +48,14 @@ public class ObjectFactory {
      */
     public ExtraerGrupoInvestigacionResponse createExtraerGrupoInvestigacionResponse() {
         return new ExtraerGrupoInvestigacionResponse();
+    }
+
+    /**
+     * Create an instance of {@link ExtraerGrupoInvestigacionObject }
+     * 
+     */
+    public ExtraerGrupoInvestigacionObject createExtraerGrupoInvestigacionObject() {
+        return new ExtraerGrupoInvestigacionObject();
     }
 
     /**

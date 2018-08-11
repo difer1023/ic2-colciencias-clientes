@@ -61,6 +61,20 @@ public interface ServiceConsultoria {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionConsultorias", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionConsultorias")
+    @ResponseWrapper(localName = "consultarClasificacionConsultoriasResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionConsultoriasResponse")
+    public String consultarClasificacionConsultorias(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.Consultoria>
      */

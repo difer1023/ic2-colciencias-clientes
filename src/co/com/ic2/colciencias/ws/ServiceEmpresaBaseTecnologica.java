@@ -43,6 +43,20 @@ public interface ServiceEmpresaBaseTecnologica {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionEmpresasBaseTecnologica", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEmpresasBaseTecnologica")
+    @ResponseWrapper(localName = "consultarClasificacionEmpresasBaseTecnologicaResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEmpresasBaseTecnologicaResponse")
+    public String consultarClasificacionEmpresasBaseTecnologica(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.EmpresaBaseTecnologica>
      */

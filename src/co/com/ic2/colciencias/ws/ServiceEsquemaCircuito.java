@@ -77,6 +77,20 @@ public interface ServiceEsquemaCircuito {
      * 
      * @param arg0
      * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionEsquemasCircuito", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEsquemasCircuito")
+    @ResponseWrapper(localName = "consultarClasificacionEsquemasCircuitoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEsquemasCircuitoResponse")
+    public String consultarClasificacionEsquemasCircuito(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.EsquemaCircuito>
      */
     @WebMethod

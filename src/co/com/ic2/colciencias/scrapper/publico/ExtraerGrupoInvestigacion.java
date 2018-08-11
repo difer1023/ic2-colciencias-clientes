@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="instituciones" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="lineasInvestigacion" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="integrantes" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="integrantesDetalles" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="productos" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -35,6 +36,7 @@ import javax.xml.bind.annotation.XmlType;
     "instituciones",
     "lineasInvestigacion",
     "integrantes",
+    "integrantesDetalles",
     "productos"
 })
 public class ExtraerGrupoInvestigacion {
@@ -43,6 +45,7 @@ public class ExtraerGrupoInvestigacion {
     protected boolean instituciones;
     protected boolean lineasInvestigacion;
     protected boolean integrantes;
+    protected boolean integrantesDetalles;
     protected boolean productos;
 
     /**
@@ -115,6 +118,22 @@ public class ExtraerGrupoInvestigacion {
      */
     public void setIntegrantes(boolean value) {
         this.integrantes = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad integrantesDetalles.
+     * 
+     */
+    public boolean isIntegrantesDetalles() {
+        return integrantesDetalles;
+    }
+
+    /**
+     * Define el valor de la propiedad integrantesDetalles.
+     * 
+     */
+    public void setIntegrantesDetalles(boolean value) {
+        this.integrantesDetalles = value;
     }
 
     /**

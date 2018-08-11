@@ -31,6 +31,20 @@ public interface ServiceInformeFinalInvestigacion {
      * 
      * @param arg0
      * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionInformesFinalesInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionInformesFinalesInvestigacion")
+    @ResponseWrapper(localName = "consultarClasificacionInformesFinalesInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionInformesFinalesInvestigacionResponse")
+    public String consultarClasificacionInformesFinalesInvestigacion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.InformeFinalInvestigacion>
      */
     @WebMethod

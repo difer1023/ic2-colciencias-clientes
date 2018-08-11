@@ -57,6 +57,20 @@ public interface ServiceDisenoIndustrial {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionDisenosIndustriales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionDisenosIndustriales")
+    @ResponseWrapper(localName = "consultarClasificacionDisenosIndustrialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionDisenosIndustrialesResponse")
+    public String consultarClasificacionDisenosIndustriales(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param gaceta
      * @param codigo
      * @param ano

@@ -101,4 +101,18 @@ public interface ServiceDocumentoTrabajo {
         @WebParam(name = "documentosTrabajo", targetNamespace = "")
         List<DocumentoTrabajo> documentosTrabajo);
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionDocumentosTrabajo", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionDocumentosTrabajo")
+    @ResponseWrapper(localName = "consultarClasificacionDocumentosTrabajoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionDocumentosTrabajoResponse")
+    public String consultarClasificacionDocumentosTrabajo(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
 }

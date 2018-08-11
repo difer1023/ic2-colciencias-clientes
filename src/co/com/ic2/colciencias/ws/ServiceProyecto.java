@@ -53,6 +53,20 @@ public interface ServiceProyecto {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionProyectos", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionProyectos")
+    @ResponseWrapper(localName = "consultarClasificacionProyectosResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionProyectosResponse")
+    public String consultarClasificacionProyectos(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param actoAdmin
      * @param codigo
      * @param ano

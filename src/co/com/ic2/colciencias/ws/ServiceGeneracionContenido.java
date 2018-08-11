@@ -33,6 +33,20 @@ public interface ServiceGeneracionContenido {
      * 
      * @param arg0
      * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionGeneracionContenidosVirtuales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosVirtuales")
+    @ResponseWrapper(localName = "consultarClasificacionGeneracionContenidosVirtualesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosVirtualesResponse")
+    public String consultarClasificacionGeneracionContenidosVirtuales(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.GeneracionContenidoVirtual>
      */
     @WebMethod
@@ -166,6 +180,20 @@ public interface ServiceGeneracionContenido {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionGeneracionContenidosImpresos", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosImpresos")
+    @ResponseWrapper(localName = "consultarClasificacionGeneracionContenidosImpresosResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosImpresosResponse")
+    public String consultarClasificacionGeneracionContenidosImpresos(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.GeneracionContenidoVirtual>
      */
@@ -174,6 +202,20 @@ public interface ServiceGeneracionContenido {
     @RequestWrapper(localName = "consultarGeneracionContenidosVirtuales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarGeneracionContenidosVirtuales")
     @ResponseWrapper(localName = "consultarGeneracionContenidosVirtualesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarGeneracionContenidosVirtualesResponse")
     public List<GeneracionContenidoVirtual> consultarGeneracionContenidosVirtuales();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionGeneracionContenidosMultimedia", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosMultimedia")
+    @ResponseWrapper(localName = "consultarClasificacionGeneracionContenidosMultimediaResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionGeneracionContenidosMultimediaResponse")
+    public String consultarClasificacionGeneracionContenidosMultimedia(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
     /**
      * 

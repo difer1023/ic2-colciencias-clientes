@@ -1,7 +1,7 @@
 <project default="wsimport">
 	<target name="wsimport">
-		<property name="serverIP" value="192.168.0.14:8081" />
-		<property name="commandPath" value="C:\Program Files\Java\jdk1.8.0_144\bin\" />
+		<property name="serverIP" value="10.8.0.4:8081" />
+		<property name="commandPath" value="C:\Program Files\Java\jdk1.8.0_77\bin\" />
 		<property name="wsdlGrupoInvestigacion" value="http://${serverIP}/flujoGrupoInvestigacion?wsdl" />
 		<property name="wsdlInvestigador" value="http://${serverIP}/flujoInvestigador?wsdl" />
 		<property name="wsdlApoyoProgramaFormacion" value="http://${serverIP}/flujoApoyoProgramaFormacion?wsdl" />

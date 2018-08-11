@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "scrapperColcienciasPublico", targetNamespace = "http://publico.scrapper.colciencias.ic2.com.co/", wsdlLocation = "http://192.168.0.13:8084/scrapper_IC2_colciencias/ScrapperColcienciasPublico?wsdl")
+@WebServiceClient(name = "scrapperColcienciasPublico", targetNamespace = "http://publico.scrapper.colciencias.ic2.com.co/", wsdlLocation = "http://localhost:8084/scrapper_IC2_colciencias/ScrapperColcienciasPublico?wsdl")
 public class ScrapperColcienciasPublico_Service
     extends Service
 {
@@ -30,7 +30,7 @@ public class ScrapperColcienciasPublico_Service
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://192.168.0.13:8084/scrapper_IC2_colciencias/ScrapperColcienciasPublico?wsdl");
+            url = new URL("http://localhost:8084/scrapper_IC2_colciencias/ScrapperColcienciasPublico?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

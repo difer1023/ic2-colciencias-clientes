@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="identificacion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="contrasena" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idGrupo" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="anoFinVentanaObservacion" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,7 +38,8 @@ import javax.xml.bind.annotation.XmlType;
     "nombre",
     "identificacion",
     "contrasena",
-    "idGrupo"
+    "idGrupo",
+    "anoFinVentanaObservacion"
 })
 public class ExtraerGrupoInvestigacion {
 
@@ -47,6 +49,7 @@ public class ExtraerGrupoInvestigacion {
     protected String identificacion;
     protected String contrasena;
     protected int idGrupo;
+    protected int anoFinVentanaObservacion;
 
     /**
      * Obtiene el valor de la propiedad tipoNacionalidad.
@@ -182,6 +185,22 @@ public class ExtraerGrupoInvestigacion {
      */
     public void setIdGrupo(int value) {
         this.idGrupo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad anoFinVentanaObservacion.
+     * 
+     */
+    public int getAnoFinVentanaObservacion() {
+        return anoFinVentanaObservacion;
+    }
+
+    /**
+     * Define el valor de la propiedad anoFinVentanaObservacion.
+     * 
+     */
+    public void setAnoFinVentanaObservacion(int value) {
+        this.anoFinVentanaObservacion = value;
     }
 
 }

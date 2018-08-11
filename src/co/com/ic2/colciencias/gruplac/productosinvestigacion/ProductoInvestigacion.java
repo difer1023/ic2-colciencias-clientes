@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="fechaProducto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="subtipo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="categoria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -32,6 +33,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ProductoInvestigacion", propOrder = {
+    "fechaProducto",
     "subtipo",
     "nombre",
     "categoria",
@@ -39,15 +41,69 @@ import javax.xml.bind.annotation.XmlType;
     "codigo"
 })
 @XmlSeeAlso({
-    TrabajoGrado.class
+    DocumentoTrabajo.class,
+    Proyecto.class,
+    GeneracionContenidoVirtual.class,
+    EsquemaCircuito.class,
+    PrototipoIndustrial.class,
+    InformeFinalInvestigacion.class,
+    EstrategiaPedagogicaFomentoCTI.class,
+    TrabajoGrado.class,
+    InnovacionProcedimientoServicio.class,
+    GeneracionContenidoImpreso.class,
+    CapituloLibroPublicado.class,
+    Consultoria.class,
+    SignoDistintivo.class,
+    ArticuloInvestigacion.class,
+    OtroArticuloPublicado.class,
+    Edicion.class,
+    AsesoriaProgramaOndas.class,
+    EventoCientifico.class,
+    EstrategiaComunicacionConocimiento.class,
+    ParticipacionCiudadanaProyectoCTI.class,
+    EmpresaBaseTecnologica.class,
+    OtroLibroPublicado.class,
+    GeneracionContenidoMultimedia.class,
+    PlantaPiloto.class,
+    ApoyoProgramaFormacion.class,
+    EspacioParticipacionCiudadanaCTI.class,
+    LibroInvestigacion.class,
+    RedConocimiento.class,
+    Software.class,
+    DisenoIndustrial.class
 })
 public abstract class ProductoInvestigacion {
 
+    protected String fechaProducto;
     protected String subtipo;
     protected String nombre;
     protected String categoria;
     protected boolean clasificado;
     protected int codigo;
+
+    /**
+     * Obtiene el valor de la propiedad fechaProducto.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFechaProducto() {
+        return fechaProducto;
+    }
+
+    /**
+     * Define el valor de la propiedad fechaProducto.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFechaProducto(String value) {
+        this.fechaProducto = value;
+    }
 
     /**
      * Obtiene el valor de la propiedad subtipo.

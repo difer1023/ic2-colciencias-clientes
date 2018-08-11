@@ -28,6 +28,7 @@ public interface ScrapperColcienciasPrivado {
 
     /**
      * 
+     * @param anoFinVentanaObservacion
      * @param identificacion
      * @param contrasena
      * @param paisNacimiento
@@ -54,6 +55,8 @@ public interface ScrapperColcienciasPrivado {
         @WebParam(name = "contrasena", targetNamespace = "")
         String contrasena,
         @WebParam(name = "idGrupo", targetNamespace = "")
-        int idGrupo);
+        int idGrupo,
+        @WebParam(name = "anoFinVentanaObservacion", targetNamespace = "")
+        int anoFinVentanaObservacion);
 
 }

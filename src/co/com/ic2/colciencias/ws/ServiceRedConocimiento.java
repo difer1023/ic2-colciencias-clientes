@@ -68,6 +68,20 @@ public interface ServiceRedConocimiento {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionRedesConocimiento", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionRedesConocimiento")
+    @ResponseWrapper(localName = "consultarClasificacionRedesConocimientoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionRedesConocimientoResponse")
+    public String consultarClasificacionRedesConocimiento(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param codigoGrupoInvestigacion
      * @param codigo
      * @param paginaWeb

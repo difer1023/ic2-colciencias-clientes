@@ -104,4 +104,18 @@ public interface ServiceEstrategiaPedagogicaFomentoCTI {
     @ResponseWrapper(localName = "consultarEstrategiasPedagogicasFomentoCTIResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarEstrategiasPedagogicasFomentoCTIResponse")
     public List<EstrategiaPedagogicaFomentoCTI> consultarEstrategiasPedagogicasFomentoCTI();
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionEstrategiasPedagogicasFomentoCTI", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEstrategiasPedagogicasFomentoCTI")
+    @ResponseWrapper(localName = "consultarClasificacionEstrategiasPedagogicasFomentoCTIResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEstrategiasPedagogicasFomentoCTIResponse")
+    public String consultarClasificacionEstrategiasPedagogicasFomentoCTI(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
 }

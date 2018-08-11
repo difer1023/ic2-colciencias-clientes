@@ -94,6 +94,20 @@ public interface ServiceSignoDistintivo {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionSignosDistintivos", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionSignosDistintivos")
+    @ResponseWrapper(localName = "consultarClasificacionSignosDistintivosResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionSignosDistintivosResponse")
+    public String consultarClasificacionSignosDistintivos(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param codigoGrupo
      * @param signosDistintivos
      * @return

@@ -28,6 +28,20 @@ public interface ServiceProyectoExtensionCTI {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionProyectosExtensionCTI", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionProyectosExtensionCTI")
+    @ResponseWrapper(localName = "consultarClasificacionProyectosExtensionCTIResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionProyectosExtensionCTIResponse")
+    public String consultarClasificacionProyectosExtensionCTI(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param codigoGrupo
      * @param proyectosExtension
      * @return

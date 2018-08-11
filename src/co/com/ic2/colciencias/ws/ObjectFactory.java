@@ -29,9 +29,11 @@ public class ObjectFactory {
     private final static QName _InsertarTrabajoGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajoGradoResponse");
     private final static QName _ConsultarTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGrado");
     private final static QName _InsertarTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajosGrado");
+    private final static QName _ConsultarClasificacionTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarClasificacionTrabajosGrado");
     private final static QName _ConsultarTrabajosGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoResponse");
     private final static QName _ConsultarTrabajosGradoGrupo_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoGrupo");
     private final static QName _ConsultarTrabajosGradoGrupoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoGrupoResponse");
+    private final static QName _ConsultarClasificacionTrabajosGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarClasificacionTrabajosGradoResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: co.com.ic2.colciencias.ws
@@ -57,6 +59,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ConsultarClasificacionTrabajosGradoResponse }
+     * 
+     */
+    public ConsultarClasificacionTrabajosGradoResponse createConsultarClasificacionTrabajosGradoResponse() {
+        return new ConsultarClasificacionTrabajosGradoResponse();
+    }
+
+    /**
      * Create an instance of {@link ConsultarTrabajosGradoGrupo }
      * 
      */
@@ -70,6 +80,14 @@ public class ObjectFactory {
      */
     public ConsultarTrabajosGradoGrupoResponse createConsultarTrabajosGradoGrupoResponse() {
         return new ConsultarTrabajosGradoGrupoResponse();
+    }
+
+    /**
+     * Create an instance of {@link ConsultarClasificacionTrabajosGrado }
+     * 
+     */
+    public ConsultarClasificacionTrabajosGrado createConsultarClasificacionTrabajosGrado() {
+        return new ConsultarClasificacionTrabajosGrado();
     }
 
     /**
@@ -150,6 +168,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarClasificacionTrabajosGrado }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarClasificacionTrabajosGrado")
+    public JAXBElement<ConsultarClasificacionTrabajosGrado> createConsultarClasificacionTrabajosGrado(ConsultarClasificacionTrabajosGrado value) {
+        return new JAXBElement<ConsultarClasificacionTrabajosGrado>(_ConsultarClasificacionTrabajosGrado_QNAME, ConsultarClasificacionTrabajosGrado.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarTrabajosGradoResponse }{@code >}}
      * 
      */
@@ -174,6 +201,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarTrabajosGradoGrupoResponse")
     public JAXBElement<ConsultarTrabajosGradoGrupoResponse> createConsultarTrabajosGradoGrupoResponse(ConsultarTrabajosGradoGrupoResponse value) {
         return new JAXBElement<ConsultarTrabajosGradoGrupoResponse>(_ConsultarTrabajosGradoGrupoResponse_QNAME, ConsultarTrabajosGradoGrupoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarClasificacionTrabajosGradoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarClasificacionTrabajosGradoResponse")
+    public JAXBElement<ConsultarClasificacionTrabajosGradoResponse> createConsultarClasificacionTrabajosGradoResponse(ConsultarClasificacionTrabajosGradoResponse value) {
+        return new JAXBElement<ConsultarClasificacionTrabajosGradoResponse>(_ConsultarClasificacionTrabajosGradoResponse_QNAME, ConsultarClasificacionTrabajosGradoResponse.class, null, value);
     }
 
 }

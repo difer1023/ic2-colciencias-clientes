@@ -1,7 +1,10 @@
 package co.com.ic2.facade;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLStreamHandler;
 import java.rmi.RemoteException;
 
 import javax.xml.namespace.QName;
@@ -18,17 +21,32 @@ public class ScraperColcienciasPrivadoFacade {
 	public ScraperColcienciasPrivadoFacade() {
 
 		try {
-
+			URLStreamHandler streamHandler= new URLStreamHandler() {
+	            @Override
+	            protected URLConnection openConnection(URL url) throws IOException {
+	              URL target = new URL(url.toString());
+	              URLConnection connection = target.openConnection();
+	              // Connection settings
+	              connection.setConnectTimeout(200000); // 10 sec
+	              connection.setReadTimeout(200000); // 1 min
+	              return(connection);
+	            }
+	          };
+			URL endpoint =	new URL(new URL(ParametrosProperties.getInstance()
+					.getPropiedadesPortal()
+					.getProperty("scrapperColcienciasPrivadoWsdl")),
+					          "",streamHandler
+					          );
 			scrapperColcienciasPrivado = new ScrapperColcienciasPrivado_Service(
-					new URL(ParametrosProperties.getInstance()
-							.getPropiedadesPortal()
-							.getProperty("scrapperColcienciasPrivadoWsdl")),
+					endpoint,
 					new QName(ParametrosProperties.getInstance()
 							.getPropiedadesPortal()
 							.getProperty("scrapperColcienciasPrivadoNamespace"),
 							ParametrosProperties.getInstance()
 									.getPropiedadesPortal()
 									.getProperty("scrapperColcienciasPrivadoName")));
+
+                 
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -38,10 +56,10 @@ public class ScraperColcienciasPrivadoFacade {
 
 	public ExtraerGrupoInvestigacionObject extraerGrupoInvestigacion(
 			String tipoNacionalidad, String paisNacimiento, String nombre,
-			String identificacion, String contrasena, int codigoGrupo) throws RemoteException {
+			String identificacion, String contrasena, int codigoGrupo,int anoFinVentanaObservacion) throws RemoteException {
 
 		return scrapperColcienciasPrivado.getScrapperColcienciasPrivadoPort()
 				.extraerGrupoInvestigacion(tipoNacionalidad, paisNacimiento,
-						nombre, identificacion, contrasena, codigoGrupo);
+						nombre, identificacion, contrasena, codigoGrupo,anoFinVentanaObservacion);
 	}
 }

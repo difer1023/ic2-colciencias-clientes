@@ -80,6 +80,20 @@ public interface ServiceEstrategiaComunicacionConocimiento {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionEstrategiasComunicacionConocimiento", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEstrategiasComunicacionConocimiento")
+    @ResponseWrapper(localName = "consultarClasificacionEstrategiasComunicacionConocimientoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEstrategiasComunicacionConocimientoResponse")
+    public String consultarClasificacionEstrategiasComunicacionConocimiento(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.EstrategiaComunicacionConocimiento>
      */

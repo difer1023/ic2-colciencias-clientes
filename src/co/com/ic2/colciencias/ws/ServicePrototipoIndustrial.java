@@ -54,6 +54,37 @@ public interface ServicePrototipoIndustrial {
 
     /**
      * 
+     * @return
+     *     returns java.lang.Object
+     * @throws CloneNotSupportedException_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "clone", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.Clone")
+    @ResponseWrapper(localName = "cloneResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.CloneResponse")
+    public Object clone()
+        throws CloneNotSupportedException_Exception
+    ;
+
+    /**
+     * 
+     * @param prototiposIndustriales
+     * @param codigoGrupo
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertarPrototiposIndustriales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarPrototiposIndustriales")
+    @ResponseWrapper(localName = "insertarPrototiposIndustrialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarPrototiposIndustrialesResponse")
+    public String insertarPrototiposIndustriales(
+        @WebParam(name = "codigoGrupo", targetNamespace = "")
+        String codigoGrupo,
+        @WebParam(name = "prototiposIndustriales", targetNamespace = "")
+        List<PrototipoIndustrial> prototiposIndustriales);
+
+    /**
+     * 
      * @param fecha
      * @param codigo
      * @param institucionFinanciadora
@@ -86,19 +117,16 @@ public interface ServicePrototipoIndustrial {
 
     /**
      * 
-     * @param prototiposIndustriales
-     * @param codigoGrupo
+     * @param arg0
      * @return
      *     returns java.lang.String
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertarPrototiposIndustriales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarPrototiposIndustriales")
-    @ResponseWrapper(localName = "insertarPrototiposIndustrialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarPrototiposIndustrialesResponse")
-    public String insertarPrototiposIndustriales(
-        @WebParam(name = "codigoGrupo", targetNamespace = "")
-        String codigoGrupo,
-        @WebParam(name = "prototiposIndustriales", targetNamespace = "")
-        List<PrototipoIndustrial> prototiposIndustriales);
+    @RequestWrapper(localName = "consultarClasificacionPrototiposIndustriales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionPrototiposIndustriales")
+    @ResponseWrapper(localName = "consultarClasificacionPrototiposIndustrialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionPrototiposIndustrialesResponse")
+    public String consultarClasificacionPrototiposIndustriales(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
 }

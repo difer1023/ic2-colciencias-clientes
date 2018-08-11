@@ -23,6 +23,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="categoria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="vigenciaCategoria" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="lider" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="integranteGrupo" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="gruposColaboracion" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,7 +41,9 @@ import javax.xml.bind.annotation.XmlType;
     "finVinculacion",
     "categoria",
     "vigenciaCategoria",
-    "lider"
+    "lider",
+    "integranteGrupo",
+    "gruposColaboracion"
 })
 public class Investigador {
 
@@ -50,6 +54,8 @@ public class Investigador {
     protected String categoria;
     protected String vigenciaCategoria;
     protected boolean lider;
+    protected int integranteGrupo;
+    protected int gruposColaboracion;
 
     /**
      * Obtiene el valor de la propiedad nombreCompleto.
@@ -209,6 +215,38 @@ public class Investigador {
      */
     public void setLider(boolean value) {
         this.lider = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad integranteGrupo.
+     * 
+     */
+    public int getIntegranteGrupo() {
+        return integranteGrupo;
+    }
+
+    /**
+     * Define el valor de la propiedad integranteGrupo.
+     * 
+     */
+    public void setIntegranteGrupo(int value) {
+        this.integranteGrupo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad gruposColaboracion.
+     * 
+     */
+    public int getGruposColaboracion() {
+        return gruposColaboracion;
+    }
+
+    /**
+     * Define el valor de la propiedad gruposColaboracion.
+     * 
+     */
+    public void setGruposColaboracion(int value) {
+        this.gruposColaboracion = value;
     }
 
 }

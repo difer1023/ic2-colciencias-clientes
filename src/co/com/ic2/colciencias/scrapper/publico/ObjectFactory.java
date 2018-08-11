@@ -26,6 +26,8 @@ public class ObjectFactory {
 
     private final static QName _ExtraerGrupoInvestigacion_QNAME = new QName("http://publico.scrapper.colciencias.ic2.com.co/", "extraerGrupoInvestigacion");
     private final static QName _ExtraerGrupoInvestigacionResponse_QNAME = new QName("http://publico.scrapper.colciencias.ic2.com.co/", "extraerGrupoInvestigacionResponse");
+    private final static QName _ExtraerGruposInvestigadorResponse_QNAME = new QName("http://publico.scrapper.colciencias.ic2.com.co/", "extraerGruposInvestigadorResponse");
+    private final static QName _ExtraerGruposInvestigador_QNAME = new QName("http://publico.scrapper.colciencias.ic2.com.co/", "extraerGruposInvestigador");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: co.com.ic2.colciencias.scrapper.publico
@@ -43,11 +45,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ExtraerGruposInvestigador }
+     * 
+     */
+    public ExtraerGruposInvestigador createExtraerGruposInvestigador() {
+        return new ExtraerGruposInvestigador();
+    }
+
+    /**
      * Create an instance of {@link ExtraerGrupoInvestigacionResponse }
      * 
      */
     public ExtraerGrupoInvestigacionResponse createExtraerGrupoInvestigacionResponse() {
         return new ExtraerGrupoInvestigacionResponse();
+    }
+
+    /**
+     * Create an instance of {@link ExtraerGruposInvestigadorResponse }
+     * 
+     */
+    public ExtraerGruposInvestigadorResponse createExtraerGruposInvestigadorResponse() {
+        return new ExtraerGruposInvestigadorResponse();
     }
 
     /**
@@ -66,6 +84,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://publico.scrapper.colciencias.ic2.com.co/", name = "extraerGrupoInvestigacionResponse")
     public JAXBElement<ExtraerGrupoInvestigacionResponse> createExtraerGrupoInvestigacionResponse(ExtraerGrupoInvestigacionResponse value) {
         return new JAXBElement<ExtraerGrupoInvestigacionResponse>(_ExtraerGrupoInvestigacionResponse_QNAME, ExtraerGrupoInvestigacionResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExtraerGruposInvestigadorResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://publico.scrapper.colciencias.ic2.com.co/", name = "extraerGruposInvestigadorResponse")
+    public JAXBElement<ExtraerGruposInvestigadorResponse> createExtraerGruposInvestigadorResponse(ExtraerGruposInvestigadorResponse value) {
+        return new JAXBElement<ExtraerGruposInvestigadorResponse>(_ExtraerGruposInvestigadorResponse_QNAME, ExtraerGruposInvestigadorResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExtraerGruposInvestigador }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://publico.scrapper.colciencias.ic2.com.co/", name = "extraerGruposInvestigador")
+    public JAXBElement<ExtraerGruposInvestigador> createExtraerGruposInvestigador(ExtraerGruposInvestigador value) {
+        return new JAXBElement<ExtraerGruposInvestigador>(_ExtraerGruposInvestigador_QNAME, ExtraerGruposInvestigador.class, null, value);
     }
 
 }

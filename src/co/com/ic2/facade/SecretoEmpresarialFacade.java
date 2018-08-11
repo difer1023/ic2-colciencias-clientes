@@ -38,7 +38,7 @@ public class SecretoEmpresarialFacade {
 			throws java.rmi.RemoteException {
 
 		return serviceSecretoEmpresarial.getServiceSecretoEmpresarialPort()
-				.consultarSecretosEmpresriales();
+				.consultarSecretosEmpresariales();
 	}
 
 	public String insertarSecretoEmpresarial(String codigo, String nombre,

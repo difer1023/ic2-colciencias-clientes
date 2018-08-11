@@ -66,4 +66,18 @@ public interface ServiceBoletin {
         @WebParam(name = "clasificado", targetNamespace = "")
         boolean clasificado);
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionBoletines", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionBoletines")
+    @ResponseWrapper(localName = "consultarClasificacionBoletinesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionBoletinesResponse")
+    public String consultarClasificacionBoletines(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
 }

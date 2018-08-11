@@ -29,6 +29,20 @@ public interface ServiceEventoCientifico {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionEventosCientificos", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEventosCientificos")
+    @ResponseWrapper(localName = "consultarClasificacionEventosCientificosResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionEventosCientificosResponse")
+    public String consultarClasificacionEventosCientificos(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @param eventosCientificos
      * @param codigoGrupo
      * @return

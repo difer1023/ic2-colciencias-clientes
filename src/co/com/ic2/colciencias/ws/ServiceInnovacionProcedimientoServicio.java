@@ -70,6 +70,20 @@ public interface ServiceInnovacionProcedimientoServicio {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionInnovacionesProcedimientosServicios", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionInnovacionesProcedimientosServicios")
+    @ResponseWrapper(localName = "consultarClasificacionInnovacionesProcedimientosServiciosResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionInnovacionesProcedimientosServiciosResponse")
+    public String consultarClasificacionInnovacionesProcedimientosServicios(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<co.com.ic2.colciencias.gruplac.productosinvestigacion.InnovacionProcedimientoServicio>
      */

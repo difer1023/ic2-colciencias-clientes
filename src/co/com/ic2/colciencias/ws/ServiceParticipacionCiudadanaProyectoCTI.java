@@ -107,4 +107,18 @@ public interface ServiceParticipacionCiudadanaProyectoCTI {
     @ResponseWrapper(localName = "consultarParticipacionesCiudadanasProyectosCTIResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarParticipacionesCiudadanasProyectosCTIResponse")
     public List<ParticipacionCiudadanaProyectoCTI> consultarParticipacionesCiudadanasProyectosCTI();
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionParticipacionesCiudadanasProyectosCTI", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionParticipacionesCiudadanasProyectosCTI")
+    @ResponseWrapper(localName = "consultarClasificacionParticipacionesCiudadanasProyectosCTIResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionParticipacionesCiudadanasProyectosCTIResponse")
+    public String consultarClasificacionParticipacionesCiudadanasProyectosCTI(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
 }

@@ -30,9 +30,23 @@ public interface ServiceSecretoEmpresarial {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "consultarSecretosEmpresriales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarSecretosEmpresriales")
-    @ResponseWrapper(localName = "consultarSecretosEmpresrialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarSecretosEmpresrialesResponse")
-    public String consultarSecretosEmpresriales();
+    @RequestWrapper(localName = "consultarSecretosEmpresariales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarSecretosEmpresariales")
+    @ResponseWrapper(localName = "consultarSecretosEmpresarialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarSecretosEmpresarialesResponse")
+    public String consultarSecretosEmpresariales();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarClasificacionSecretosEmpresariales", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionSecretosEmpresariales")
+    @ResponseWrapper(localName = "consultarClasificacionSecretosEmpresarialesResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionSecretosEmpresarialesResponse")
+    public String consultarClasificacionSecretosEmpresariales(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
     /**
      * 
