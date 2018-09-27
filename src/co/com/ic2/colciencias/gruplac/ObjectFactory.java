@@ -30,43 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GrupoInvestigacion }
-     * 
-     */
-    public GrupoInvestigacion createGrupoInvestigacion() {
-        return new GrupoInvestigacion();
-    }
-
-    /**
-     * Create an instance of {@link Institucion }
-     * 
-     */
-    public Institucion createInstitucion() {
-        return new Institucion();
-    }
-
-    /**
-     * Create an instance of {@link LineaInvestigacion }
-     * 
-     */
-    public LineaInvestigacion createLineaInvestigacion() {
-        return new LineaInvestigacion();
-    }
-
-    /**
      * Create an instance of {@link Investigador }
      * 
      */
     public Investigador createInvestigador() {
         return new Investigador();
-    }
-
-    /**
-     * Create an instance of {@link GrupoInvestigacion.ListInstituciones }
-     * 
-     */
-    public GrupoInvestigacion.ListInstituciones createGrupoInvestigacionListInstituciones() {
-        return new GrupoInvestigacion.ListInstituciones();
     }
 
 }

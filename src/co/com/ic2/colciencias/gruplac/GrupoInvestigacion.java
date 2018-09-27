@@ -106,7 +106,6 @@ import co.com.ic2.colciencias.gruplac.productosinvestigacion.TrabajoGrado;
  *         &lt;element name="trabajoDirigido" type="{productosInvestigacion.gruplac.colciencias.ic2.com.co}TrabajoGrado" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="proyecto" type="{productosInvestigacion.gruplac.colciencias.ic2.com.co}Proyecto" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="apoyoProgramaFormacion" type="{productosInvestigacion.gruplac.colciencias.ic2.com.co}ApoyoProgramaFormacion" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="urlGruplac" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -163,8 +162,7 @@ import co.com.ic2.colciencias.gruplac.productosinvestigacion.TrabajoGrado;
     "asesoriaProgramaOndas",
     "trabajoDirigido",
     "proyecto",
-    "apoyoProgramaFormacion",
-    "urlGruplac"
+    "apoyoProgramaFormacion"
 })
 public class GrupoInvestigacion {
 
@@ -215,7 +213,6 @@ public class GrupoInvestigacion {
     protected List<TrabajoGrado> trabajoDirigido;
     protected List<Proyecto> proyecto;
     protected List<ApoyoProgramaFormacion> apoyoProgramaFormacion;
-    protected String urlGruplac;
 
     /**
      * Obtiene el valor de la propiedad codigo.
@@ -1500,30 +1497,6 @@ public class GrupoInvestigacion {
             apoyoProgramaFormacion = new ArrayList<ApoyoProgramaFormacion>();
         }
         return this.apoyoProgramaFormacion;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad urlGruplac.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getUrlGruplac() {
-        return urlGruplac;
-    }
-
-    /**
-     * Define el valor de la propiedad urlGruplac.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setUrlGruplac(String value) {
-        this.urlGruplac = value;
     }
 
 

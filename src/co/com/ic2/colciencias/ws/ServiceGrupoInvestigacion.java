@@ -9,6 +9,7 @@ import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
+import co.com.ic2.colciencias.gruplac.ClasificacionGrupo;
 import co.com.ic2.colciencias.gruplac.GrupoInvestigacion;
 
 
@@ -29,31 +30,20 @@ public interface ServiceGrupoInvestigacion {
 
     /**
      * 
-     * @param nombre
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertarGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarGrupoInvestigacion")
-    @ResponseWrapper(localName = "insertarGrupoInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarGrupoInvestigacionResponse")
-    public int insertarGrupoInvestigacion(
-        @WebParam(name = "nombre", targetNamespace = "")
-        String nombre);
-
-    /**
-     * 
+     * @param arg1
      * @param arg0
      * @return
-     *     returns java.lang.String
+     *     returns co.com.ic2.colciencias.gruplac.ClasificacionGrupo
      */
     @WebMethod
     @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "consultarClasificacionesGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionesGrupoInvestigacion")
     @ResponseWrapper(localName = "consultarClasificacionesGrupoInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionesGrupoInvestigacionResponse")
-    public String consultarClasificacionesGrupoInvestigacion(
+    public ClasificacionGrupo consultarClasificacionesGrupoInvestigacion(
         @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
 
     /**
      * 
@@ -65,6 +55,51 @@ public interface ServiceGrupoInvestigacion {
     @RequestWrapper(localName = "consultarGruposInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarGruposInvestigacion")
     @ResponseWrapper(localName = "consultarGruposInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarGruposInvestigacionResponse")
     public List<GrupoInvestigacion> consultarGruposInvestigacion();
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarTiposProductosInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarTiposProductosInvestigacion")
+    @ResponseWrapper(localName = "consultarTiposProductosInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarTiposProductosInvestigacionResponse")
+    public String consultarTiposProductosInvestigacion();
+
+    /**
+     * 
+     * @param grupoInvestigacion
+     * @return
+     *     returns int
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertarGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarGrupoInvestigacion")
+    @ResponseWrapper(localName = "insertarGrupoInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.InsertarGrupoInvestigacionResponse")
+    public int insertarGrupoInvestigacion(
+        @WebParam(name = "grupoInvestigacion", targetNamespace = "")
+        GrupoInvestigacion grupoInvestigacion);
+
+    /**
+     * 
+     * @param anoFormacion
+     * @param jsonProductosGrupo
+     * @param jsonPerfilesColaboracion
+     * @return
+     *     returns co.com.ic2.colciencias.gruplac.ClasificacionGrupo
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "clasificarGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ClasificarGrupoInvestigacion")
+    @ResponseWrapper(localName = "clasificarGrupoInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ClasificarGrupoInvestigacionResponse")
+    public ClasificacionGrupo clasificarGrupoInvestigacion(
+        @WebParam(name = "jsonProductosGrupo", targetNamespace = "")
+        String jsonProductosGrupo,
+        @WebParam(name = "jsonPerfilesColaboracion", targetNamespace = "")
+        String jsonPerfilesColaboracion,
+        @WebParam(name = "anoFormacion", targetNamespace = "")
+        String anoFormacion);
 
     /**
      * 

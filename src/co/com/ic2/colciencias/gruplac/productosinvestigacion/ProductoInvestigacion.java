@@ -41,36 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "codigo"
 })
 @XmlSeeAlso({
-    DocumentoTrabajo.class,
-    Proyecto.class,
-    GeneracionContenidoVirtual.class,
-    EsquemaCircuito.class,
-    PrototipoIndustrial.class,
-    InformeFinalInvestigacion.class,
-    EstrategiaPedagogicaFomentoCTI.class,
-    TrabajoGrado.class,
-    InnovacionProcedimientoServicio.class,
-    GeneracionContenidoImpreso.class,
-    CapituloLibroPublicado.class,
-    Consultoria.class,
-    SignoDistintivo.class,
-    ArticuloInvestigacion.class,
-    OtroArticuloPublicado.class,
-    Edicion.class,
-    AsesoriaProgramaOndas.class,
-    EventoCientifico.class,
-    EstrategiaComunicacionConocimiento.class,
-    ParticipacionCiudadanaProyectoCTI.class,
-    EmpresaBaseTecnologica.class,
-    OtroLibroPublicado.class,
-    GeneracionContenidoMultimedia.class,
-    PlantaPiloto.class,
-    ApoyoProgramaFormacion.class,
-    EspacioParticipacionCiudadanaCTI.class,
-    LibroInvestigacion.class,
-    RedConocimiento.class,
-    Software.class,
-    DisenoIndustrial.class
+    TrabajoGrado.class
 })
 public abstract class ProductoInvestigacion {
 

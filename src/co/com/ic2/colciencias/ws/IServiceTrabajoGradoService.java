@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "IServiceTrabajoGradoService", targetNamespace = "http://ws.colciencias.ic2.com.co/", wsdlLocation = "http://10.8.0.4:8081/flujoTrabajoGrado?wsdl")
+@WebServiceClient(name = "IServiceTrabajoGradoService", targetNamespace = "http://ws.colciencias.ic2.com.co/", wsdlLocation = "http://10.8.0.3:8081/flujoTrabajoGrado?wsdl")
 public class IServiceTrabajoGradoService
     extends Service
 {
@@ -30,7 +30,7 @@ public class IServiceTrabajoGradoService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://10.8.0.4:8081/flujoTrabajoGrado?wsdl");
+            url = new URL("http://10.8.0.3:8081/flujoTrabajoGrado?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

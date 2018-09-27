@@ -4,6 +4,7 @@ package co.com.ic2.colciencias.ws;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
+import co.com.ic2.colciencias.gruplac.GrupoInvestigacion;
 
 
 /**
@@ -16,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="grupoInvestigacion" type="{gruplac.colciencias.ic2.com.co}GrupoInvestigacion" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,34 +28,34 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "insertarGrupoInvestigacion", propOrder = {
-    "nombre"
+    "grupoInvestigacion"
 })
 public class InsertarGrupoInvestigacion {
 
-    protected String nombre;
+    protected GrupoInvestigacion grupoInvestigacion;
 
     /**
-     * Obtiene el valor de la propiedad nombre.
+     * Obtiene el valor de la propiedad grupoInvestigacion.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link GrupoInvestigacion }
      *     
      */
-    public String getNombre() {
-        return nombre;
+    public GrupoInvestigacion getGrupoInvestigacion() {
+        return grupoInvestigacion;
     }
 
     /**
-     * Define el valor de la propiedad nombre.
+     * Define el valor de la propiedad grupoInvestigacion.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link GrupoInvestigacion }
      *     
      */
-    public void setNombre(String value) {
-        this.nombre = value;
+    public void setGrupoInvestigacion(GrupoInvestigacion value) {
+        this.grupoInvestigacion = value;
     }
 
 }

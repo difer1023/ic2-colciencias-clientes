@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import co.com.ic2.colciencias.gruplac.ClasificacionGrupo;
 
 
 /**
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="return" type="{gruplac.colciencias.ic2.com.co}ClasificacionGrupo" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,17 +34,17 @@ import javax.xml.bind.annotation.XmlType;
 public class ConsultarClasificacionesGrupoInvestigacionResponse {
 
     @XmlElement(name = "return")
-    protected String _return;
+    protected ClasificacionGrupo _return;
 
     /**
      * Obtiene el valor de la propiedad return.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ClasificacionGrupo }
      *     
      */
-    public String getReturn() {
+    public ClasificacionGrupo getReturn() {
         return _return;
     }
 
@@ -52,10 +53,10 @@ public class ConsultarClasificacionesGrupoInvestigacionResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ClasificacionGrupo }
      *     
      */
-    public void setReturn(String value) {
+    public void setReturn(ClasificacionGrupo value) {
         this._return = value;
     }
 
