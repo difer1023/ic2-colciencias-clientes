@@ -30,11 +30,67 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ProductoInvestigacion }
+     * 
+     */
+    public ProductoInvestigacion createProductoInvestigacion() {
+        return new ProductoInvestigacion();
+    }
+
+    /**
+     * Create an instance of {@link GrupoInvestigacion }
+     * 
+     */
+    public GrupoInvestigacion createGrupoInvestigacion() {
+        return new GrupoInvestigacion();
+    }
+
+    /**
      * Create an instance of {@link Investigador }
      * 
      */
     public Investigador createInvestigador() {
         return new Investigador();
+    }
+
+    /**
+     * Create an instance of {@link AtributoProducto }
+     * 
+     */
+    public AtributoProducto createAtributoProducto() {
+        return new AtributoProducto();
+    }
+
+    /**
+     * Create an instance of {@link ProductoInvestigacion.Autores }
+     * 
+     */
+    public ProductoInvestigacion.Autores createProductoInvestigacionAutores() {
+        return new ProductoInvestigacion.Autores();
+    }
+
+    /**
+     * Create an instance of {@link ProductoInvestigacion.Atributos }
+     * 
+     */
+    public ProductoInvestigacion.Atributos createProductoInvestigacionAtributos() {
+        return new ProductoInvestigacion.Atributos();
+    }
+
+    /**
+     * Create an instance of {@link GrupoInvestigacion.Integrantes }
+     * 
+     */
+    public GrupoInvestigacion.Integrantes createGrupoInvestigacionIntegrantes() {
+        return new GrupoInvestigacion.Integrantes();
+    }
+
+    /**
+     * Create an instance of {@link GrupoInvestigacion.ProductosInvestigacion }
+     * 
+     */
+    public GrupoInvestigacion.ProductosInvestigacion createGrupoInvestigacionProductosInvestigacion() {
+        return new GrupoInvestigacion.ProductosInvestigacion();
     }
 
 }

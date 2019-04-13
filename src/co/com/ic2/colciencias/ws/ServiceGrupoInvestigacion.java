@@ -22,7 +22,6 @@ import co.com.ic2.colciencias.gruplac.GrupoInvestigacion;
 @WebService(name = "serviceGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/")
 @XmlSeeAlso({
     co.com.ic2.colciencias.gruplac.ObjectFactory.class,
-    co.com.ic2.colciencias.gruplac.productosinvestigacion.ObjectFactory.class,
     co.com.ic2.colciencias.ws.ObjectFactory.class
 })
 public interface ServiceGrupoInvestigacion {
@@ -30,8 +29,8 @@ public interface ServiceGrupoInvestigacion {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param anoFinVentanaObservacion
+     * @param codigoGrupo
      * @return
      *     returns co.com.ic2.colciencias.gruplac.ClasificacionGrupo
      */
@@ -40,10 +39,27 @@ public interface ServiceGrupoInvestigacion {
     @RequestWrapper(localName = "consultarClasificacionesGrupoInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionesGrupoInvestigacion")
     @ResponseWrapper(localName = "consultarClasificacionesGrupoInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarClasificacionesGrupoInvestigacionResponse")
     public ClasificacionGrupo consultarClasificacionesGrupoInvestigacion(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
+        @WebParam(name = "codigoGrupo", targetNamespace = "")
+        int codigoGrupo,
+        @WebParam(name = "anoFinVentanaObservacion", targetNamespace = "")
+        int anoFinVentanaObservacion);
+
+    /**
+     * 
+     * @param anoFinVentanaObservacion
+     * @param codigoGrupo
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarProduccionPorAutor", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorAutor")
+    @ResponseWrapper(localName = "consultarProduccionPorAutorResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorAutorResponse")
+    public String consultarProduccionPorAutor(
+        @WebParam(name = "codigoGrupo", targetNamespace = "")
+        int codigoGrupo,
+        @WebParam(name = "anoFinVentanaObservacion", targetNamespace = "")
+        int anoFinVentanaObservacion);
 
     /**
      * 
@@ -58,6 +74,23 @@ public interface ServiceGrupoInvestigacion {
 
     /**
      * 
+     * @param anoFinVentanaObservacion
+     * @param codigoGrupo
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarProduccionPorAno", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorAno")
+    @ResponseWrapper(localName = "consultarProduccionPorAnoResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorAnoResponse")
+    public String consultarProduccionPorAno(
+        @WebParam(name = "codigoGrupo", targetNamespace = "")
+        int codigoGrupo,
+        @WebParam(name = "anoFinVentanaObservacion", targetNamespace = "")
+        int anoFinVentanaObservacion);
+
+    /**
+     * 
      * @return
      *     returns java.lang.String
      */
@@ -66,6 +99,23 @@ public interface ServiceGrupoInvestigacion {
     @RequestWrapper(localName = "consultarTiposProductosInvestigacion", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarTiposProductosInvestigacion")
     @ResponseWrapper(localName = "consultarTiposProductosInvestigacionResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarTiposProductosInvestigacionResponse")
     public String consultarTiposProductosInvestigacion();
+
+    /**
+     * 
+     * @param anoFinVentanaObservacion
+     * @param codigoGrupo
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "consultarProduccionPorTipologia", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorTipologia")
+    @ResponseWrapper(localName = "consultarProduccionPorTipologiaResponse", targetNamespace = "http://ws.colciencias.ic2.com.co/", className = "co.com.ic2.colciencias.ws.ConsultarProduccionPorTipologiaResponse")
+    public String consultarProduccionPorTipologia(
+        @WebParam(name = "codigoGrupo", targetNamespace = "")
+        int codigoGrupo,
+        @WebParam(name = "anoFinVentanaObservacion", targetNamespace = "")
+        int anoFinVentanaObservacion);
 
     /**
      * 

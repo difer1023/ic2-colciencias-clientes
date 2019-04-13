@@ -37,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="indice_colaboracion" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="clasificacion_grupo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="anos_existencia" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="ano_creacion" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -66,7 +67,8 @@ import javax.xml.bind.annotation.XmlType;
     "indiceCohesion",
     "indiceColaboracion",
     "clasificacionGrupo",
-    "anosExistencia"
+    "anosExistencia",
+    "anoCreacion"
 })
 public class ClasificacionGrupo {
 
@@ -109,6 +111,8 @@ public class ClasificacionGrupo {
     protected String clasificacionGrupo;
     @XmlElement(name = "anos_existencia")
     protected int anosExistencia;
+    @XmlElement(name = "ano_creacion")
+    protected int anoCreacion;
 
     /**
      * Obtiene el valor de la propiedad productos.
@@ -444,6 +448,22 @@ public class ClasificacionGrupo {
      */
     public void setAnosExistencia(int value) {
         this.anosExistencia = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad anoCreacion.
+     * 
+     */
+    public int getAnoCreacion() {
+        return anoCreacion;
+    }
+
+    /**
+     * Define el valor de la propiedad anoCreacion.
+     * 
+     */
+    public void setAnoCreacion(int value) {
+        this.anoCreacion = value;
     }
 
 }

@@ -24,16 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _InsertarTrabajosGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajosGradoResponse");
-    private final static QName _InsertarTrabajoGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajoGrado");
-    private final static QName _InsertarTrabajoGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajoGradoResponse");
-    private final static QName _ConsultarTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGrado");
-    private final static QName _InsertarTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "insertarTrabajosGrado");
-    private final static QName _ConsultarClasificacionTrabajosGrado_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarClasificacionTrabajosGrado");
-    private final static QName _ConsultarTrabajosGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoResponse");
-    private final static QName _ConsultarTrabajosGradoGrupo_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoGrupo");
-    private final static QName _ConsultarTrabajosGradoGrupoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarTrabajosGradoGrupoResponse");
-    private final static QName _ConsultarClasificacionTrabajosGradoResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "consultarClasificacionTrabajosGradoResponse");
+    private final static QName _EjecutarRecomendacion_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "ejecutarRecomendacion");
+    private final static QName _EjecutarRecomendacionResponse_QNAME = new QName("http://ws.colciencias.ic2.com.co/", "ejecutarRecomendacionResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: co.com.ic2.colciencias.ws
@@ -43,173 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InsertarTrabajosGrado }
+     * Create an instance of {@link EjecutarRecomendacionResponse }
      * 
      */
-    public InsertarTrabajosGrado createInsertarTrabajosGrado() {
-        return new InsertarTrabajosGrado();
+    public EjecutarRecomendacionResponse createEjecutarRecomendacionResponse() {
+        return new EjecutarRecomendacionResponse();
     }
 
     /**
-     * Create an instance of {@link ConsultarTrabajosGrado }
+     * Create an instance of {@link EjecutarRecomendacion }
      * 
      */
-    public ConsultarTrabajosGrado createConsultarTrabajosGrado() {
-        return new ConsultarTrabajosGrado();
+    public EjecutarRecomendacion createEjecutarRecomendacion() {
+        return new EjecutarRecomendacion();
     }
 
     /**
-     * Create an instance of {@link ConsultarClasificacionTrabajosGradoResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link EjecutarRecomendacion }{@code >}}
      * 
      */
-    public ConsultarClasificacionTrabajosGradoResponse createConsultarClasificacionTrabajosGradoResponse() {
-        return new ConsultarClasificacionTrabajosGradoResponse();
+    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "ejecutarRecomendacion")
+    public JAXBElement<EjecutarRecomendacion> createEjecutarRecomendacion(EjecutarRecomendacion value) {
+        return new JAXBElement<EjecutarRecomendacion>(_EjecutarRecomendacion_QNAME, EjecutarRecomendacion.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ConsultarTrabajosGradoGrupo }
+     * Create an instance of {@link JAXBElement }{@code <}{@link EjecutarRecomendacionResponse }{@code >}}
      * 
      */
-    public ConsultarTrabajosGradoGrupo createConsultarTrabajosGradoGrupo() {
-        return new ConsultarTrabajosGradoGrupo();
-    }
-
-    /**
-     * Create an instance of {@link ConsultarTrabajosGradoGrupoResponse }
-     * 
-     */
-    public ConsultarTrabajosGradoGrupoResponse createConsultarTrabajosGradoGrupoResponse() {
-        return new ConsultarTrabajosGradoGrupoResponse();
-    }
-
-    /**
-     * Create an instance of {@link ConsultarClasificacionTrabajosGrado }
-     * 
-     */
-    public ConsultarClasificacionTrabajosGrado createConsultarClasificacionTrabajosGrado() {
-        return new ConsultarClasificacionTrabajosGrado();
-    }
-
-    /**
-     * Create an instance of {@link ConsultarTrabajosGradoResponse }
-     * 
-     */
-    public ConsultarTrabajosGradoResponse createConsultarTrabajosGradoResponse() {
-        return new ConsultarTrabajosGradoResponse();
-    }
-
-    /**
-     * Create an instance of {@link InsertarTrabajoGradoResponse }
-     * 
-     */
-    public InsertarTrabajoGradoResponse createInsertarTrabajoGradoResponse() {
-        return new InsertarTrabajoGradoResponse();
-    }
-
-    /**
-     * Create an instance of {@link InsertarTrabajoGrado }
-     * 
-     */
-    public InsertarTrabajoGrado createInsertarTrabajoGrado() {
-        return new InsertarTrabajoGrado();
-    }
-
-    /**
-     * Create an instance of {@link InsertarTrabajosGradoResponse }
-     * 
-     */
-    public InsertarTrabajosGradoResponse createInsertarTrabajosGradoResponse() {
-        return new InsertarTrabajosGradoResponse();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarTrabajosGradoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "insertarTrabajosGradoResponse")
-    public JAXBElement<InsertarTrabajosGradoResponse> createInsertarTrabajosGradoResponse(InsertarTrabajosGradoResponse value) {
-        return new JAXBElement<InsertarTrabajosGradoResponse>(_InsertarTrabajosGradoResponse_QNAME, InsertarTrabajosGradoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarTrabajoGrado }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "insertarTrabajoGrado")
-    public JAXBElement<InsertarTrabajoGrado> createInsertarTrabajoGrado(InsertarTrabajoGrado value) {
-        return new JAXBElement<InsertarTrabajoGrado>(_InsertarTrabajoGrado_QNAME, InsertarTrabajoGrado.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarTrabajoGradoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "insertarTrabajoGradoResponse")
-    public JAXBElement<InsertarTrabajoGradoResponse> createInsertarTrabajoGradoResponse(InsertarTrabajoGradoResponse value) {
-        return new JAXBElement<InsertarTrabajoGradoResponse>(_InsertarTrabajoGradoResponse_QNAME, InsertarTrabajoGradoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarTrabajosGrado }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarTrabajosGrado")
-    public JAXBElement<ConsultarTrabajosGrado> createConsultarTrabajosGrado(ConsultarTrabajosGrado value) {
-        return new JAXBElement<ConsultarTrabajosGrado>(_ConsultarTrabajosGrado_QNAME, ConsultarTrabajosGrado.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarTrabajosGrado }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "insertarTrabajosGrado")
-    public JAXBElement<InsertarTrabajosGrado> createInsertarTrabajosGrado(InsertarTrabajosGrado value) {
-        return new JAXBElement<InsertarTrabajosGrado>(_InsertarTrabajosGrado_QNAME, InsertarTrabajosGrado.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarClasificacionTrabajosGrado }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarClasificacionTrabajosGrado")
-    public JAXBElement<ConsultarClasificacionTrabajosGrado> createConsultarClasificacionTrabajosGrado(ConsultarClasificacionTrabajosGrado value) {
-        return new JAXBElement<ConsultarClasificacionTrabajosGrado>(_ConsultarClasificacionTrabajosGrado_QNAME, ConsultarClasificacionTrabajosGrado.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarTrabajosGradoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarTrabajosGradoResponse")
-    public JAXBElement<ConsultarTrabajosGradoResponse> createConsultarTrabajosGradoResponse(ConsultarTrabajosGradoResponse value) {
-        return new JAXBElement<ConsultarTrabajosGradoResponse>(_ConsultarTrabajosGradoResponse_QNAME, ConsultarTrabajosGradoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarTrabajosGradoGrupo }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarTrabajosGradoGrupo")
-    public JAXBElement<ConsultarTrabajosGradoGrupo> createConsultarTrabajosGradoGrupo(ConsultarTrabajosGradoGrupo value) {
-        return new JAXBElement<ConsultarTrabajosGradoGrupo>(_ConsultarTrabajosGradoGrupo_QNAME, ConsultarTrabajosGradoGrupo.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarTrabajosGradoGrupoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarTrabajosGradoGrupoResponse")
-    public JAXBElement<ConsultarTrabajosGradoGrupoResponse> createConsultarTrabajosGradoGrupoResponse(ConsultarTrabajosGradoGrupoResponse value) {
-        return new JAXBElement<ConsultarTrabajosGradoGrupoResponse>(_ConsultarTrabajosGradoGrupoResponse_QNAME, ConsultarTrabajosGradoGrupoResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsultarClasificacionTrabajosGradoResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "consultarClasificacionTrabajosGradoResponse")
-    public JAXBElement<ConsultarClasificacionTrabajosGradoResponse> createConsultarClasificacionTrabajosGradoResponse(ConsultarClasificacionTrabajosGradoResponse value) {
-        return new JAXBElement<ConsultarClasificacionTrabajosGradoResponse>(_ConsultarClasificacionTrabajosGradoResponse_QNAME, ConsultarClasificacionTrabajosGradoResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.colciencias.ic2.com.co/", name = "ejecutarRecomendacionResponse")
+    public JAXBElement<EjecutarRecomendacionResponse> createEjecutarRecomendacionResponse(EjecutarRecomendacionResponse value) {
+        return new JAXBElement<EjecutarRecomendacionResponse>(_EjecutarRecomendacionResponse_QNAME, EjecutarRecomendacionResponse.class, null, value);
     }
 
 }

@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para consultarClasificacionesGrupoInvestigacion complex type.
+ * <p>Clase Java para consultarProduccionPorTipologia complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="consultarClasificacionesGrupoInvestigacion">
+ * &lt;complexType name="consultarProduccionPorTipologia">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "consultarClasificacionesGrupoInvestigacion", propOrder = {
+@XmlType(name = "consultarProduccionPorTipologia", propOrder = {
     "codigoGrupo",
     "anoFinVentanaObservacion"
 })
-public class ConsultarClasificacionesGrupoInvestigacion {
+public class ConsultarProduccionPorTipologia {
 
     protected int codigoGrupo;
     protected int anoFinVentanaObservacion;
