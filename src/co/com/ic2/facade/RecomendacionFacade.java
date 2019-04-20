@@ -52,7 +52,7 @@ public class RecomendacionFacade {
 
 	}
 
-	public String extraerGrupoInvestigacion(
+	public String ejecutarRecomendacion(
 			String estadoActual,String categoriaActual,String categoriaObjetivo) throws RemoteException {
 
 		return recomendacion.getServiceRedNeuronalPort()

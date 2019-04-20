@@ -74,4 +74,25 @@ public class GrupoInvestigacionFacade {
 				.getServiceGrupoInvestigacionPort()
 				.consultarGrupoInvestigacion(codigo);
 	}
+	
+	public String consultarProduccionPorAno(int codigoGrupo,int anoFinVentanaObservacion) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.consultarProduccionPorAno(codigoGrupo, anoFinVentanaObservacion);
+	}
+	
+	public String consultarProduccionPorAutor(int codigoGrupo,int anoFinVentanaObservacion) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.consultarProduccionPorAutor(codigoGrupo, anoFinVentanaObservacion);
+	}
+	
+	public String consultarProduccionPorTipologia(int codigoGrupo,int anoFinVentanaObservacion) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.consultarProduccionPorTipologia(codigoGrupo, anoFinVentanaObservacion);
+	}
 }
