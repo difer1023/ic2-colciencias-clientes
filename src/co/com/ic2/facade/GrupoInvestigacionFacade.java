@@ -8,6 +8,7 @@ import javax.xml.namespace.QName;
 
 import co.com.ic2.colciencias.gruplac.ClasificacionGrupo;
 import co.com.ic2.colciencias.gruplac.GrupoInvestigacion;
+import co.com.ic2.colciencias.gruplac.ProductoInvestigacion;
 import co.com.ic2.colciencias.utilidades.properties.ParametrosProperties;
 import co.com.ic2.colciencias.ws.GruposInvestigacionService;
 
@@ -38,6 +39,20 @@ public class GrupoInvestigacionFacade {
 		return serviceGrupoInvestigacion
 				.getServiceGrupoInvestigacionPort()
 				.insertarGrupoInvestigacion(grupoInvestigacion);
+	}
+	
+	public int actualizarGrupoInvestigacion(int codigoGrupo,GrupoInvestigacion grupoInvestigacion) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.actualizarGrupoInvestigacion(codigoGrupo, grupoInvestigacion);
+	}
+	
+	public int actualizarProductosClasificacionManual(List<ProductoInvestigacion> productos) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.actualizarProductosClasificacionManual(productos);
 	}
 	
 	public List<GrupoInvestigacion> consultarGruposInvestigacion(String nombre) {
@@ -94,5 +109,19 @@ public class GrupoInvestigacionFacade {
 		return serviceGrupoInvestigacion
 				.getServiceGrupoInvestigacionPort()
 				.consultarProduccionPorTipologia(codigoGrupo, anoFinVentanaObservacion);
+	}
+	
+	public String consultarProductosDuplicados(int codigoGrupo) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.consultarProductosDuplicados(codigoGrupo);
+	}
+	
+	public String consultarProductosSinClasificacion(int codigoGrupo) {
+
+		return serviceGrupoInvestigacion
+				.getServiceGrupoInvestigacionPort()
+				.consultarProductosSinClasificacion(codigoGrupo);
 	}
 }

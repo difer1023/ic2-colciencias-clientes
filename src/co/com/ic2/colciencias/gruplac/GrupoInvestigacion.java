@@ -1,10 +1,8 @@
 
 package co.com.ic2.colciencias.gruplac;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
@@ -83,13 +81,9 @@ import javax.xml.bind.annotation.XmlType;
     "productosInvestigacion",
     "urlGruplac"
 })
-public class GrupoInvestigacion implements Serializable{
+public class GrupoInvestigacion {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1437924862376167311L;
-	protected int codigo;
+    protected int codigo;
     protected String nombre;
     protected String anoMesFormacion;
     protected String departamento;
